@@ -3,7 +3,7 @@
 import React, { useCallback, useEffect, useState, useId } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight, Play } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronRight, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ExpandableButton } from "@/components/ui/expandable-button";
 import Link from "next/link";
@@ -171,18 +171,21 @@ export function TransformationsCarousel() {
                 ))}
             </div>
             <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="pt-2 flex justify-end"
             >
-                <div className="pt-2 flex justify-end">
-                    <ExpandableButton
-                        href="/projects"
-                        label="Explore All Projects"
-                        variant="primary"
-                        className="text-lg py-3 pl-8 pr-2"
-                    />
-                </div>
+                <Link
+                    href="/projects"
+                    className="group inline-flex items-center gap-5 bg-accent text-white pl-8 pr-3 py-3 rounded-full font-bold text-lg hover:bg-secondary transition-all duration-300 shadow-xl shadow-accent/20 hover:-translate-y-1 active:scale-95"
+                >
+                    Explore All Projects
+                    <div className="bg-white rounded-full p-2 transition-all duration-300 group-hover:scale-110 group-hover:bg-accent">
+                        <ChevronRight className="w-5 h-5 text-accent transition-colors duration-300 group-hover:text-white" />
+                    </div>
+                </Link>
             </motion.div>
         </section>
     );
