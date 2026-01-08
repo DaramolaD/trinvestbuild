@@ -64,7 +64,7 @@ const processSteps = [
 const faqs = [
     {
         question: "Do you offer services internationally?",
-        answer: "Yes, TR InvestBuild provides interior design services worldwide. We have successful projects across North America, Europe, and the Middle East.",
+        answer: "Yes, TR Investments & Construction provides architectural design and construction management services worldwide. We help investors and developers unlock property potential across North America, Europe, and the Middle East.",
     },
     {
         question: "What is your typical project timeline?",
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                         transition={{ delay: 0.1 }}
                         className="text-white/70 text-xl md:text-2xl max-w-3xl leading-relaxed font-geist! font-normal"
                     >
-                        From initial concept to final styling, we provide a full suite of interior design and construction services that combine aesthetic excellence with functional precision.
+                        With over 10+ years of industry experience and a background in construction management, we help investors and developers unlock the full potential of their land and properties through expert architectural design and construction management.
                     </motion.p>
                 </div>
             </section>

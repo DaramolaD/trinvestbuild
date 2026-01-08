@@ -50,7 +50,7 @@ export function Hero() {
                     </div>
 
                     <p className="text-base md:text-xl text-white/80 max-w-2xl font-normal leading-relaxed">
-                        S4S Design transforms spaces with timeless design, superior materials, and detail-driven construction all managed with care from concept to completion.
+                        TR Investments & Construction helps investors and developers unlock land and property potential through architectural design and construction management expertise.
                     </p>
 
                     <div className="flex pt-2 md:pt-4">
@@ -80,7 +80,7 @@ export function Hero() {
                             ))}
                         </div>
                         <p className="text-sm md:text-base font-normal leading-[1.5] text-white/90">
-                            "Sepideh made our renovation easy and seamless. The results were better than we imagined, and the team was professional from start to finish."
+                            "TR Investments & Construction helped us unlock the full potential of our property. Their architectural design expertise and construction management made the entire process seamless and professional."
                         </p>
                         <div className="flex items-end justify-between">
                             <div>

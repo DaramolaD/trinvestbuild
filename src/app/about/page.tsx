@@ -8,27 +8,27 @@ import Link from "next/link";
 import { useRef } from "react";
 import { AwardsSection } from "@/components/sections/AwardsSection";
 import { VideoSection } from "@/components/sections/VideoSection";
-import ceo from "../../../public/image/ceo4.png";
+import ceo from "../../../public/image/trinvest.png";
 
 const philosophy = [
     {
         title: "Vision",
-        description: "We see beyond the physical layout to the emotional potential of every unique space.",
+        description: "We see beyond the current state to unlock the full potential of every property and land investment.",
         icon: Eye,
     },
     {
-        title: "Craftsmanship",
-        description: "Precision in every detail, from custom millwork to the finest textile selection.",
+        title: "Expertise",
+        description: "10+ years of architectural design experience combined with construction management expertise.",
         icon: Award,
     },
     {
-        title: "Personalization",
-        description: "Every design is a unique reflection of our client's individual story and lifestyle.",
+        title: "Value Creation",
+        description: "Every project is designed to maximize property value and investment returns for developers and investors.",
         icon: Heart,
     },
     {
         title: "Excellence",
-        description: "Committing to the highest standards across all our international luxury projects.",
+        description: "Committing to the highest standards across all our international projects, from concept to completion.",
         icon: Target,
     },
 ];
@@ -43,7 +43,7 @@ export default function AboutPage() {
     return (
         <div className="bg-background text-white min-h-screen overflow-x-hidden" ref={containerRef}>
             {/* Hero Section */}
-            <section className="relative min-h-screen py-24 md:py-0 w-full overflow-hidden flex items-center">
+            <section className="relative min-h-screen py-24 md:py-32 w-full overflow-hidden flex items-center">
                 {/* Background Image with Parallax */}
                 <motion.div
                     style={{ y: useTransform(scrollYProgress, [0, 0.2], [0, 200]) }}
@@ -79,10 +79,10 @@ export default function AboutPage() {
                             className="space-y-8 text-white/70 text-lg md:text-xl leading-relaxed font-normal max-w-xl"
                         >
                             <p className="font-geist!">
-                                With over a decade of experience in the international interior design scene, TR InvestBuild has established itself as a visionary creator of sophisticated and timeless spaces.
+                                I'm an Architectural Designer with over 10+ years of industry experience, with a background in construction management. I started TR Investments & Construction to help investors & developers unlock land and property potential.
                             </p>
                             <p className="font-geist!">
-                                Based in Toronto but working worldwide, our studio is dedicated to the idea that our environment profoundly influences our well-being and productivity.
+                                Based in Toronto but working worldwide, we combine architectural design expertise with construction management to transform properties into valuable investments.
                             </p>
                         </motion.div>
 
@@ -120,8 +120,8 @@ export default function AboutPage() {
                             />
                             <div className="absolute bottom-8 left-8 right-8 bg-black/40 backdrop-blur-xl border border-white/10 p-6 rounded-3xl flex items-center justify-between">
                                 <div>
-                                    <p className="text-xs uppercase tracking-widest text-accent font-bold mb-1">Founder & Lead Designer</p>
-                                    <p className="text-xl font-geist! font-medium text-white">Sepideh Sayad</p>
+                                    <p className="text-xs uppercase tracking-widest text-accent font-bold mb-1">Founder & Architectural Designer</p>
+                                    <p className="text-xl font-geist! font-medium text-white">TR Investments & Construction</p>
                                 </div>
                                 <div className="p-3 bg-white/10 rounded-full border border-white/10">
                                     <Award className="w-6 h-6 text-accent" />
@@ -144,7 +144,7 @@ export default function AboutPage() {
                         <span className="text-accent uppercase tracking-[0.4em] font-bold text-[10px]">Our Values</span>
                         <h2 className="text-4xl md:text-6xl font-geist! font-semibold tracking-tight text-secondary">Design <span className="text-accent underline decoration-accent/20 underline-offset-8 italic">Philosophy</span></h2>
                         <p className="text-secondary/60 text-lg md:text-xl font-geist!">
-                            We believe that luxury is a feeling, not just a price tag. It's found in the harmony of function, beauty, and soul.
+                            We believe in unlocking the full potential of every property through expert architectural design and construction management, creating value for investors and developers.
                         </p>
                     </div>
 
@@ -195,8 +195,8 @@ export default function AboutPage() {
                             "Design is not just what it looks like and feels like. Design is how it works and how it reflects the soul of those who inhabit it."
                         </h3>
                         <div className="mt-12 space-y-2">
-                            <p className="text-accent text-xl uppercase tracking-[0.3em] font-black">Sepideh Sayad</p>
-                            <p className="text-white/40 text-sm uppercase tracking-widest">Founder & Creative Director</p>
+                            <p className="text-accent text-xl uppercase tracking-[0.3em] font-black">TR Investments & Construction</p>
+                            <p className="text-white/40 text-sm uppercase tracking-widest">Architectural Design & Construction Management</p>
                         </div>
                     </motion.div>
                 </div>
@@ -222,10 +222,10 @@ export default function AboutPage() {
                             </h2>
                             <div className="space-y-8 text-secondary/60 text-lg font-geist! leading-relaxed">
                                 <p>
-                                    From the luxury skyscrapers of Dubai to high-end residential renovations in London and New York, our portfolio spans continents and styles.
+                                    With over 10+ years of industry experience and a background in construction management, we specialize in helping investors and developers unlock the full potential of their land and properties.
                                 </p>
                                 <p>
-                                    This global perspective allows us to bring a unique blend of cultural influences and technical excellence to every project we undertake.
+                                    Our unique combination of architectural design expertise and construction management allows us to deliver projects that maximize value while maintaining the highest standards of quality and design.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-10 pt-4">

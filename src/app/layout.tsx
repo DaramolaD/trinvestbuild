@@ -27,8 +27,8 @@ const geist = Geist({
 // });
 
 export const metadata: Metadata = {
-  title: "TR InvestBuild | Luxury Design & Construction",
-  description: "Modern, elegant, and sophisticated interior design and renovation services worldwide. 10+ years of experience in luxury residential and commercial spaces.",
+  title: "TR Investments & Construction | Architectural Design & Construction Management",
+  description: "Architectural Designer with 10+ years experience and construction management background. Helping investors and developers unlock land and property potential worldwide.",
 };
 
 export default function RootLayout({

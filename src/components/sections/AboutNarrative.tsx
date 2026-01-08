@@ -76,7 +76,7 @@ export function AboutNarrative() {
                                 <span className="text-accent">CA | US | Internationally.</span>
                             </h2>
                             <p className="text-secondary/80 text-base md:text-lg leading-relaxed font-normal">
-                                At TR InvestBuild, we specialize in bringing your renovation dreams to life with thoughtful design, expert craftsmanship, and an obsessive attention to detail. Offering Worldwide Design Services since 2014, we transform luxury homes into bespoke living experiences.
+                                With over 10+ years of industry experience and a background in construction management, TR Investments & Construction helps investors and developers unlock the full potential of their land and properties through expert architectural design and construction management.
                             </p>
                         </motion.div>
 

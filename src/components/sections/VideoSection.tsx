@@ -15,7 +15,7 @@ const videos = [
     },
     {
         id: 3,
-        src: "/video/interiorDesigner_2.mp4",
+        src: "/video/trinvest.mp4",
         title: "Visionary Design",
         subtitle: "A Message from Our Founder",
         description: "Discover the passion and purpose behind every TR InvestBuild project. Our team shares the journey and philosophy that drives our global success.",

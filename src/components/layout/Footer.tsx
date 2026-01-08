@@ -25,7 +25,7 @@ export function Footer() {
                             </div>
                         </Link>
                         <p className="text-primary/70 max-w-xs leading-relaxed">
-                            Transforming spaces with precision design. Over 10 years of creating residential and commercial interiors worldwide.
+                            Architectural Designer with 10+ years experience and construction management background. Helping investors and developers unlock land and property potential.
                         </p>
                         <div className="flex space-x-4 items-center">
                             <Link href="https://instagram.com/tr_investbuild" target="_blank" className="hover:text-accent transition-colors">
@@ -86,7 +86,7 @@ export function Footer() {
                     <div>
                         <h4 className="text-white font-serif text-xl mb-6">Newsletter</h4>
                         <p className="text-primary/70 text-sm mb-6 leading-relaxed">
-                            Subscribe to get the latest interior design tips and project updates.
+                            Subscribe to get the latest updates on architectural design, construction management, and property investment insights.
                         </p>
                         <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                             <input

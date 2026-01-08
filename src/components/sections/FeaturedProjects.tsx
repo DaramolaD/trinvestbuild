@@ -124,7 +124,7 @@ export function FeaturedProjects() {
                             </h2>
                         </div>
                         <p className="text-foreground/60 max-w-xl text-lg leading-relaxed font-light">
-                            A curated selection of award-winning interior design projects that redefine the boundaries of luxury and functional living.
+                            A curated selection of architectural design and construction projects that unlock property potential for investors and developers worldwide.
                         </p>
                     </div>
                     <Button variant="link" className="px-0 h-auto text-foreground hover:text-accent group text-sm uppercase tracking-widest font-semibold" asChild>

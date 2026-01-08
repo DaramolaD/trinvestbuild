@@ -13,7 +13,7 @@ const transformations = [
         id: 1,
         title: "Modern Minimalist Kitchen",
         category: "Kitchen Transformation",
-        video: "/video/interiorDesigner.mp4",
+        video: "/video/projectmanagement.mp4",
         description: "A sleek, functional overhaul emphasizing natural light and clean lines.",
         href: "/portfolio/1"
     },
@@ -21,7 +21,7 @@ const transformations = [
         id: 2,
         title: "Elite Living Experience",
         category: "Living Room Remodel",
-        video: "/video/interiorDesigner_2.mp4",
+        video: "/video/landdevelopment.mp4",
         description: "Sophisticated design with premium textures and cinematic atmosphere.",
         href: "/portfolio/2"
     },
@@ -29,7 +29,7 @@ const transformations = [
         id: 3,
         title: "Bespoke Office Sanctuary",
         category: "Workspace Design",
-        video: "/video/interiorDesigner_3.mp4",
+        video: "/video/investor.mp4",
         description: "A calm, productive environment tailored for high-end professional work.",
         href: "/portfolio/3"
     }
