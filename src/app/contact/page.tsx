@@ -52,7 +52,7 @@ export default function ContactPage() {
     return (
         <div className="bg-background text-white min-h-screen overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-[70vh] py-24 md:py-0 w-full overflow-hidden flex items-center">
+            <section className="relative min-h-[70vh] py-24 md:py-32 w-full overflow-hidden flex items-center">
                 {/* Background Image with Parallax */}
                 <div className="absolute inset-0 z-0">
                     <div
@@ -71,7 +71,7 @@ export default function ContactPage() {
                         <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 backdrop-blur-md text-accent uppercase tracking-[0.2em] font-bold text-[10px] rounded-full px-4 py-1.5">
                             Get In Touch
                         </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
+                        <h1 className="text-5xl md:text-7xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
                             Let's Create <br />
                             <span className="text-accent italic underline decoration-accent/20 underline-offset-8">Something Beautiful</span>
                         </h1>
@@ -115,27 +115,27 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Form Section */}
-            <section className="py-32 px-6 lg:px-12 bg-[#FDF8F1] relative">
-                <div className="absolute top-0 left-0 w-full h-px bg-black/5" />
+            <section className="py-32 px-6 lg:px-12 bg-background relative">
+                <div className="absolute top-0 left-0 w-full h-px bg-white/10" />
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
                     {/* Left: Info */}
                     <div className="lg:col-span-2 space-y-10">
                         <div className="space-y-6">
-                            <span className="inline-flex items-center gap-2 bg-accent/5 border border-accent/10 backdrop-blur-md text-accent uppercase tracking-[0.2em] font-bold text-[10px] rounded-full px-4 py-1.5">
+                            <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 backdrop-blur-md text-accent uppercase tracking-[0.2em] font-bold text-[10px] rounded-full px-4 py-1.5">
                                 Request a Quote
                             </span>
-                            <h2 className="text-4xl md:text-5xl font-geist! font-semibold tracking-tight text-secondary">
+                            <h2 className="text-4xl md:text-5xl font-geist! font-semibold tracking-tight text-white">
                                 Start Your <br />
                                 <span className="text-accent italic underline decoration-accent/20 underline-offset-8">Design Journey</span>
                             </h2>
-                            <p className="text-secondary/60 text-lg leading-relaxed font-geist! font-normal">
-                                With <span className="text-secondary font-bold">+10 years of experience</span> in high-end Residential & Commercial design, TR InvestBuild is ready to bring your vision to life.
+                            <p className="text-white/70 text-lg leading-relaxed font-geist! font-normal">
+                                With <span className="text-white font-bold">+10 years of experience</span> in high-end Residential & Commercial design, TR InvestBuild is ready to bring your vision to life.
                             </p>
                         </div>
 
                         {/* Quick Links */}
                         <div className="space-y-4 pt-6">
-                            <p className="text-xs uppercase tracking-widest font-bold text-secondary/40">Quick Links</p>
+                            <p className="text-xs uppercase tracking-widest font-bold text-white/40">Quick Links</p>
                             <div className="space-y-3">
                                 {[
                                     { label: "View Our Work", href: "/portfolio" },
@@ -145,7 +145,7 @@ export default function ContactPage() {
                                     <Link
                                         key={link.href}
                                         href={link.href}
-                                        className="block text-secondary/70 hover:text-accent transition-colors font-semibold"
+                                        className="block text-white/70 hover:text-accent transition-colors font-semibold"
                                     >
                                         → {link.label}
                                     </Link>
@@ -156,7 +156,7 @@ export default function ContactPage() {
 
                     {/* Right: Form */}
                     <div className="lg:col-span-3">
-                        <ContactForm variant="light" />
+                        <ContactForm variant="dark" />
                     </div>
                 </div>
             </section>

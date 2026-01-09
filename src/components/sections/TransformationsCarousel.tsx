@@ -175,7 +175,7 @@ export function TransformationsCarousel() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="pt-2 flex justify-end"
+                className="pt-2 flex justify-center mt-10 md:mt-0 md:justify-end"
             >
                 <Link
                     href="/projects"

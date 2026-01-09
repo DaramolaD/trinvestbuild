@@ -35,12 +35,12 @@ export function Navbar() {
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-4",
                 scrolled
                     ? "py-4 bg-background/80 backdrop-blur-md shadow-sm"
                     : isDarkPage
-                        ? "py-4 md:py-8 bg-background/80 backdrop-blur-md"
-                        : "py-4 md:py-8 bg-transparent"
+                        ? "py-4 md:py-4 bg-background/80 backdrop-blur-md"
+                        : "py-4 md:py-4 bg-transparent"
             )}
         >
             <nav className="max-w-7xl mx-auto flex items-center justify-between">

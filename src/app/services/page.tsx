@@ -82,7 +82,7 @@ export default function ServicesPage() {
     return (
         <div className="bg-background text-white min-h-screen overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-screen py-24 md:py-0 w-full overflow-hidden flex items-center">
+            <section className="relative min-h-screen py-24 md:py-32 w-full overflow-hidden flex items-center">
                 {/* Background Image with Parallax */}
                 <div className="absolute inset-0 z-0">
                     <div
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                         <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 backdrop-blur-md text-accent uppercase tracking-[0.2em] font-bold text-[10px] rounded-full px-4 py-1.5">
                             Our Expertise
                         </span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
+                        <h1 className="text-5xl md:text-7xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
                             Custom Design Services <br />
                             <span className="text-accent italic underline decoration-accent/20 underline-offset-8">Tailored to Your Vision</span>
                         </h1>

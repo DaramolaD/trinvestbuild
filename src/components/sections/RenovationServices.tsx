@@ -149,7 +149,7 @@ export function RenovationServices() {
             </div>
 
             {/* 3. Mobile CTA */}
-            <div className="mt-16 lg:hidden px-6">
+            <div className="mt-16 w-fit mx-auto lg:hidden px-6">
                 <Link
                     href="/contact"
                     className="group flex items-center justify-between bg-secondary text-white px-6 py-3 rounded-full font-bold text-base md:text-lg hover:bg-accent transition-all duration-300 shadow-xl active:scale-95"

@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Video, FileText, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Calendar, Video, FileText, Sparkles, ChevronDown } from "lucide-react";
 import * as React from "react";
 
 const bookingOptions = [
@@ -35,8 +35,18 @@ interface ContactFormProps {
     variant?: "light" | "dark";
 }
 
+const renovationOptions = [
+    { value: "residential", label: "Residential" },
+    { value: "commercial", label: "Commercial" },
+    { value: "remodel", label: "Remodel" },
+    { value: "new-build", label: "New Build" },
+];
+
 export function ContactForm({ variant = "light" }: ContactFormProps) {
     const [selectedBooking, setSelectedBooking] = React.useState("");
+    const [selectedRenovation, setSelectedRenovation] = React.useState("");
+    const [isSelectOpen, setIsSelectOpen] = React.useState(false);
+    const selectRef = React.useRef<HTMLDivElement>(null);
 
     const isDark = variant === "dark";
     const bgClass = isDark ? "bg-white/5 backdrop-blur-xl border-white/10" : "bg-[#F9F9F9] border-black/5";
@@ -45,6 +55,18 @@ export function ContactForm({ variant = "light" }: ContactFormProps) {
     const buttonClass = isDark
         ? "bg-white text-secondary hover:bg-accent hover:text-white"
         : "bg-[#1A1A1A] text-white hover:bg-accent";
+
+    // Close dropdown when clicking outside
+    React.useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+                setIsSelectOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     return (
         <motion.div
@@ -147,16 +169,52 @@ export function ContactForm({ variant = "light" }: ContactFormProps) {
                         <label className={`text-xs font-semibold uppercase tracking-widest ${labelClass} flex items-center gap-1`}>
                             Type of Renovation <span className="text-accent">*</span>
                         </label>
-                        <select
-                            className={`w-full ${inputBgClass} border rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all appearance-none cursor-pointer`}
-                            required
-                        >
-                            <option value="">Select...</option>
-                            <option value="residential">Residential</option>
-                            <option value="commercial">Commercial</option>
-                            <option value="remodel">Remodel</option>
-                            <option value="new-build">New Build</option>
-                        </select>
+                        <div className="relative" ref={selectRef}>
+                            <button
+                                type="button"
+                                onClick={() => setIsSelectOpen(!isSelectOpen)}
+                                className={`w-full ${inputBgClass} border-2 rounded-xl px-5 py-4 pr-12 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all duration-200 cursor-pointer hover:border-accent/30 text-left ${selectedRenovation ? (isDark ? "text-white border-white/20" : "text-[#1A1A1A] border-black/10") : (isDark ? "text-white/40 border-white/10" : "text-[#1A1A1A]/40 border-black/5")}`}
+                            >
+                                <span>{selectedRenovation ? renovationOptions.find(opt => opt.value === selectedRenovation)?.label : "Select..."}</span>
+                            </button>
+                            <div className={`absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center justify-center transition-colors duration-200 ${isDark ? "text-white/50" : "text-[#1A1A1A]/50"}`}>
+                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isSelectOpen ? "rotate-180" : ""}`} strokeWidth={2.5} />
+                            </div>
+                            
+                            <AnimatePresence>
+                                {isSelectOpen && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: -10 }}
+                                        transition={{ duration: 0.2 }}
+                                        className={`absolute z-50 w-full mt-2 ${isDark ? "bg-background border-white/10" : "bg-white border-black/5"} border-2 rounded-xl shadow-lg overflow-hidden`}
+                                    >
+                                        {renovationOptions.map((option) => (
+                                            <button
+                                                key={option.value}
+                                                type="button"
+                                                onClick={() => {
+                                                    setSelectedRenovation(option.value);
+                                                    setIsSelectOpen(false);
+                                                }}
+                                                className={`w-full px-5 py-2 text-left transition-all duration-200 border-b last:border-b-0 ${
+                                                    selectedRenovation === option.value
+                                                        ? isDark
+                                                            ? "bg-accent/20 text-accent border-accent/20"
+                                                            : "bg-accent/10 text-accent border-accent/20"
+                                                        : isDark
+                                                            ? "text-white hover:bg-white/5 border-white/10"
+                                                            : "text-[#1A1A1A] hover:bg-black/5 border-black/5"
+                                                }`}
+                                            >
+                                                {option.label}
+                                            </button>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
                     </div>
                 </div>
 

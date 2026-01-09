@@ -66,7 +66,7 @@ export default function AboutPage() {
                             <span className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 backdrop-blur-md text-accent uppercase tracking-[0.2em] font-bold text-[10px] rounded-full px-4 py-1.5">
                                 The Studio
                             </span>
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
+                            <h1 className="text-5xl md:text-7xl lg:text-6xl font-geist! font-semibold text-white leading-[1.1] tracking-tight">
                                 About <span className="text-accent italic underline decoration-accent/20 underline-offset-8">TR</span> <br />
                                 InvestBuild
                             </h1>
@@ -134,8 +134,6 @@ export default function AboutPage() {
 
             {/* Owner Video Section */}
             <VideoSection videoId={3} />
-
-            <AwardsSection />
 
             {/* Philosophy Section */}
             <section className="py-32 px-6 lg:px-12 bg-[#FDF8F1] relative">

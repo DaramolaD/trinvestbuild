@@ -86,10 +86,10 @@ export function AboutNarrative() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="grid grid-cols-3 gap-4 md:gap-8 pt-4 md:pt-8 border-t border-secondary/10"
+                            className="grid grid-cols-1 sm:grid-cols-3 max-[640px]:justify-items-center max-[640px]:text-center max-[640px]:mb-10 items-center gap-4 md:gap-8 pt-4 md:pt-8 border-t border-secondary/10"
                         >
                             {stats.map((stat, index) => (
-                                <div key={index} className="space-y-1">
+                                <div key={index} className="space-y-1 max-[640px]:max-w-fit">
                                     <p className="text-3xl md:text-5xl font-semibold">{stat.value}</p>
                                     <p className="text-base font-medium md:text-xs uppercase tracking-widest text-secondary/50 leading-tight">
                                         {stat.label}
